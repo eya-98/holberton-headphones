@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+/** desktop */
+/**background */
+body {
+    background-image: url(images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    background-position: center;
+}
+/**header */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header img {
+    height: 2.5rem; 
+}
+ul {
+    display: flex;
+    flex-grow: 0.05;
+    justify-content: space-between;
+    font-size: var(--font-size-s);
+}
+.navbar li {
+    list-style: none;
+}
+ a {
+    text-decoration: none;
+    color: white;
+}
+.navbar li a:hover {
+color: var(--maincolor);
+}
+
+/** main */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20%;
+} 
+.menu_btn_true {
+    display: none;
+}
+.title {
+    color: white;
+    font-size: var(--font-size-l);
+    font-weight: bold;
+    --font-family: var(--font-family);
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.sous-title {
+    margin-top: 0;
+    padding-top: 0;
+    color: white;
+    font-size: var(--font-size-s);
+    font-weight: bold;
+    --font-family: var(--font-family);
+    text-align: center;
+}
+.button {
+    margin-top: 2rem;
+    background-color: var(--maincolor);
+    height: 2.2rem;
+    border-radius: 20px;
+    width: 10rem;
+    border: none;
+}
+.button:hover {
+    background-color: var(--transparence);
+}
+.button:active {
+    background-color: var(--transparence);
+}
+/**
+.false_right, .false_left {
+    display: none;
+}
+*/
+.parag {
+    padding-top: 0;
+    color: white;
+    font-size: var(--font-size-m);
+    --font-family: var(--font-family);
+    text-align: center;
+    margin: 2% 19%;
+}
+/** variables */
+:root {
+    --font-size-s: 80%;
+    --font-size-l: 150%;
+    --font-size-m: 100%;
+    --maincolor: #FF6565;
+    --font-family: Source Sans Pro;
+    --transparence: rgb(255, 101, 101, 0.9);
+}
+/** iphone */
+@media screen and (max-width: 481px) {
+.navbar {
+    display: none;
+}
+.parag {
+    margin: 2% 18%;
+}
+.menu_btn_true {
+    display: inline;
+    background-color: transparent;
+    border: none;
+}
+.header {
+    justify-content: flex-start;    
+} 
+header img {
+    position: relative;
+    margin-left: 5rem;
+}
+}
+
