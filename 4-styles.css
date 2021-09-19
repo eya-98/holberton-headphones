@@ -375,6 +375,9 @@ html, body {
 .header img {
     height: 2.5rem; 
 }
+.croix {
+  display: none;
+}
 ul {
     display: flex;
     flex-grow: 0.05;
@@ -682,17 +685,28 @@ transition: all 0.3s ease;
     position: absolute;
     margin-top: 3rem;
     opacity: 0;
+    z-index: 1;
 }
+
 .checks:checked ~ .navbar{
 display: flex;
 flex-direction: column;
 position: absolute;
 margin-top: 7rem;
 margin-left: 4rem;
-
 }
-
-.menu_btn_true {
+.checks:checked ~ .croix {
+  display: inline;
+  z-index: 0;
+  position: absolute;
+  height: 32px;
+  top: 2.5rem;
+  width: 32px;
+}
+.checks:checked ~ .menu_btn_true {
+  display: none;
+}
+.checks:not(:checked) ~ .menu_btn_true {
     display: inline;
     background-color: transparent;
     border: none;
@@ -700,6 +714,9 @@ margin-left: 4rem;
     width: 32px;
     background-image: url("data:image/svg+xml, %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Emenu%3C/title%3E%3Cpath d='M24.96 22.4c0.707 0 1.28 0.573 1.28 1.28s-0.573 1.28-1.28 1.28h-20.48c-0.707 0-1.28-0.573-1.28-1.28s0.573-1.28 1.28-1.28h20.48zM18.56 14.72c0.707 0 1.28 0.573 1.28 1.28s-0.573 1.28-1.28 1.28h-14.080c-0.707 0-1.28-0.573-1.28-1.28s0.573-1.28 1.28-1.28h14.080zM27.52 7.040c0.707 0 1.28 0.573 1.28 1.28s-0.573 1.28-1.28 1.28h-23.040c-0.707 0-1.28-0.573-1.28-1.28s0.573-1.28 1.28-1.28h23.040z'%3E%3C/path%3E%3C/svg%3E");
     }
+.checks:not(:checked) .croix {
+display: none;
+}
 .header {
     justify-content: flex-start;
 } 
