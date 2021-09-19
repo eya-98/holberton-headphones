@@ -687,6 +687,10 @@ transition: all 0.3s ease;
     opacity: 0;
     z-index: 1;
 }
+.submit_btn {
+  padding-left: 0;
+  margin-left: 0;
+}
 
 .checks:checked ~ .navbar{
 display: flex;
