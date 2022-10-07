@@ -579,6 +579,8 @@ flex-wrap: wrap;
     background-size: cover;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
 }
 
 .contacts {
